@@ -11,7 +11,7 @@ import 'features/todo/domain/repositories/todo_repository.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
-  Hive.registerAdapter(TodoModelAdapter());
+  // Hive.registerAdapter(TodoModelAdapter());
   final box = await Hive.openBox<TodoModel>('todos');
   final local = TodoLocalDataSourceImpl(box);
   final repo = TodoRepositoryImpl(local);
