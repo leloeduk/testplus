@@ -9,7 +9,7 @@ abstract class TodoLocalDataSource {
 }
 
 class TodoLocalDataSourceImpl implements TodoLocalDataSource {
-  final Box box;
+  final Box<TodoModel> box;
   TodoLocalDataSourceImpl(this.box);
 
   @override

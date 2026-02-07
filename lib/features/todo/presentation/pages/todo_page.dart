@@ -266,7 +266,7 @@ class _TodoPageState extends State<TodoPage> with TickerProviderStateMixin {
     }
     final lower = title.toLowerCase();
     final matchIndex = lower.indexOf(_searchQuery);
-    if (matchIndex == -1)
+    if (matchIndex == -1) {
       return Text(
         title,
         style: GoogleFonts.poppins(
@@ -275,6 +275,7 @@ class _TodoPageState extends State<TodoPage> with TickerProviderStateMixin {
           decoration: done ? TextDecoration.lineThrough : TextDecoration.none,
         ),
       );
+    }
     final before = title.substring(0, matchIndex);
     final match = title.substring(matchIndex, matchIndex + _searchQuery.length);
     final after = title.substring(matchIndex + _searchQuery.length);
